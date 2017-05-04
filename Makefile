@@ -2,15 +2,17 @@ SRC_LIBA=$(addprefix liba/, a.c a.h)
 SRC_FRANK=$(addprefix libfrank/, frank.c frank.h debug.c)
 SRC_INTRO=$(addprefix intro/, main.c intro.h)
 
+LIB_LIBA=$(addsuffix .so, $(addprefix liba/, liba1 liba2 liba3))
+
 CC?=cc
 export CC
 
 CFLAGS+= -g
 export CFLAGS
 
-default: liba/liba.so libfrank/libfrank.so intro/intro
+default: $(LIBA_LIBA) libfrank/libfrank.so intro/intro
 
-liba/liba.so: $(SRC_LIBA)
+$(LIBA_LIBA): $(SRC_LIBA)
 	$(MAKE) -C liba
 
 libfrank/libfrank.so: $(SRC_FRANK)
