@@ -1,0 +1,5 @@
+liba/*.so
+libfrank/*.so
+intro/intro
+
+\.*.sw*

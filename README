@@ -1,0 +1,8 @@
+* FrankenSSL lite
+
+FrankenSSL sans SSL.
+
+Requirements:
+  * binutils-devel;
+  * GCC; and
+  * GNU make
