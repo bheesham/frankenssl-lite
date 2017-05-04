@@ -1,5 +1,6 @@
 liba/*.so
 libfrank/*.so
+libfrank/debug
 intro/intro
 
 \.*.sw*

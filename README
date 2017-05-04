@@ -1,8 +1,13 @@
 * FrankenSSL lite
 
-FrankenSSL sans SSL.
+FrankenSSL sans SSL. This library doesn't do much.
 
 Requirements:
   * binutils-devel;
   * GCC; and
   * GNU make
+
+To run:
+#+BEGIN_SRC bash
+LD_LIBRARY_PATH=/dir/containing/libfrank.so app
+#+END_SRC

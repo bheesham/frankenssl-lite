@@ -1,5 +1,5 @@
 SRC_LIBA=$(addprefix liba/, a.c a.h)
-SRC_FRANK=$(addprefix libfrank/, frank.c frank.h)
+SRC_FRANK=$(addprefix libfrank/, frank.c frank.h debug.c)
 SRC_INTRO=$(addprefix intro/, main.c intro.h)
 
 CC?=cc
@@ -20,8 +20,8 @@ intro/intro: $(SRC_INTRO) libfrank/libfrank.so
 	$(MAKE) -C intro
 
 clean:
-	rm liba/liba.so
-	rm libfrank/libfrank.so
-	rm intro/intro
+	$(MAKE) -C intro
+	$(MAKE) -C libfrank
+	$(MAKE) -C liba
 
 .PHONY: clean default
